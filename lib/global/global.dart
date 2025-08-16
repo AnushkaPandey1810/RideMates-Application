@@ -1,0 +1,18 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:user_app/models/direction_details.dart';
+
+import '../models/user_model.dart';
+
+final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+User? currentUser;
+List driversList = [];
+UserModel? userModelCurrentInfo;
+String cloudMessageingServerToken = "ya29.c.c0ASRK0Gb5NYPFDje-j9gKc2VAKbG7QiZQqgA0cIQ_SM3fGcrCRGcQRLTQ4pWYdKK9gW-FBOI_huqlVc27W7EiCShAx2JxrdIf1wiJ5UY-kHWbug1RGBh-wHygSsoiv1gxPqreICThiTwPqG7FfSttwSu-UjX9d3QAy0zLwttDuRNz3QKzs4O7iVFprOz1AfSNllt11QeD0koa2LVX81wOKtGD37hjbkiQVt1u5tbiaJVrYy_fa1cWa2yLhtKRLhWjivxlb2qqpWLotoRGWy9nzDBFLE51NxKZ3rvHQ2nkCZxE3Oe3qScvZf7EGuxJY-pH-pi4ALySwGwHV8WRiF288jU2VGTomokW_Sh0VwJg-IF7XYJWCSl85SdLL385DoY3jll5ZRbibQdbmhvvlhZ1ilfVX-v0MYhUb3uux0XpShx_3SJlom02g390JY7pvoX-r26uc3kJeQUSjVuk3Sx_Ff62g_q3WjhxJS_WyFBgY4iS9iI5y495hwz_5p_JjWwBj8wb7YkummzUOUMM5e6eqa678km9guaa14_vzwm5nqhJ3_wR4u8w1Y7FkFwxnzg3gi9dgMuYQYnOmmrRlSlXs3mcjuzfe_wxYla0oO17Xggxs5MbaswOt0kbzdySjcQ9UW7OmpsOtauY2lzRmXl0IjcYlQW7SIOuS2tRi_spdMuyIWS_BY87ReoQm2jbWBU7uwSw2QFqjl1Q10Zan2oxsQZW1ovZqgQo2V43zB2QI8dZeaxZ0VOcrMZXrQcJRZvZvBtVcj3xlRVZru0_BBYU2Ogn7FZc5_zOF_tszJvVjhOBQQgstR-n_vd91tSgvqUul6_-zQlksfWvYR3nctwX3nwv8vlcbsem1hrY9h3WjbOnc2Ws6WXJ29siFMutB3gpXdfirZiOvY9nvoVXgB6X5jcev50Ioc6VjqYdUfyoStr5rOO4YRh-fzI4zQYk2ubJBjRswlfO0-gvayz2Q1nYBfMyYgWgibxaZWjIZXdRgzQvQu4f14O10mw";
+DirectionDetailsInfo? tripDirectionDetailsInfo;
+String driverCarDetails = "";
+String driverName = "";
+String driverPhone ="";
+double countRatingStars= 0.0;
+String titleStarsRating = "";
+String userDropOffAddress = "";
